@@ -1,0 +1,44 @@
+﻿1) Vozmognost' kopirovat' i vstavlyat' taski i taks-gruppi 
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/46-copy-paste-tasks
+
+2) Cyrillic content is rendered with invalid encoding. Server-side is modified to return UTF-8 encoded XML.
+See attached screenshot to see how invalid behaviour look like.
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/39-localization-issue
+
+3) nugno na editore postavit' esche odin checkbox s textom "autosave in current version" kotoriy budet sohranyat' rezultat kagdie 2 minuti esli bili izmeneiya.
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/49-autosave-feature
+
+4) Pri uhode sostranici editora nugno zadavat' vopros - sohranyat' li poslednyuyu versiyu
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/57-save-on-exit
+
+5) Bug: subtask poyavlyaetsys pod drugoy taskoy
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/28-bug--subtask-poyavlyaetsys-pod-drugoy-taskoy
+
+6) dropdown list on predcessors - wrong sequence
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/21-dropdown-list-on-predcessors---wrong-sequence
+
+7) kogda nagimaetsya edit i posle ego zakritiya redaktiruemaya zadacha dolgna bit' podsvechena
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/11-kogda-nagimaetsya-edit-i-posle-ego-zakritiya-redaktiruemaya-zadacha-dolgna-bit--podsvechena
+
+8) videledie zhirnim shriftom subtaskov v spiske v predcessors
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/50-videledie-zhirnim-shriftom-subtaskov-v-spiske-v-predcessors
+
+9) spisok numeruetsya neverno. seychas v predcessors v ropdown numeraciya sbita
+https://www.assembla.com/spaces/ganttzilla_flash_editor/tickets/47-spisok-numeruetsya-neverno
+
+Viewer
+
+1. na diagrame PERT u zadach numeraciya skvoznaya (1.1.1) a na I-popapah - numeraciya absolutnaya (10).
+2. Vopros: chto oznachayut raznie formi zadach?
+3. Complect -> Completed
+4. Na vievere nado zapratit' peremeschenie zadach - eto fumlcional dlya editora
+5. Vopros: kakim obrazom task gruppa svyazana s ee subtaskami?
+
+Editor
+
+fixed! 1. Gde funkcionalnoe menyu? Kak dobavit' task? Kak dobavit' Task Group?
+fixed! 2. Netu kalendarya i nelzya pomant' start date dlya proekta.
+fixed! 3. Nelzya pomenyat' start date i finish date dlya zadach.
+fixed! 4. Nezya udalit' zadachy.
+fixed! 5. ya udalil resurs. No dlitelnost' zadachi kotoraya imela 2 resursa vklyuchaya tot chto udalen - ne izmenilas'.
+fixed! 6. Na edit task mnogie text labels vihodyat za ramki.

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 width="328"  height="138" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Script>
+		<![CDATA[
+			import utils.Global;
+			import planner.Predecessor;
+			
+			private var _predecessor:Predecessor
+			
+			public function set predecessor(pred:Predecessor):void{
+				_predecessor = pred
+			}
+			
+			[Bindable] public function get predecessor():Predecessor{
+				return _predecessor
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+				  top="10" right="10" left="10" height="32" 
+				  backgroundColor="#ACB4CC"
+				  mouseDown="startDrag()"
+				  mouseUp="stopDrag()">
+			<s:Label top="10" left="15" right="34"
+					 text="Task Predecessor" fontWeight="bold" fontSize="16" height="16" />
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="10" top="8"  width="17"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()" height="14"/>
+			
+		</s:BorderContainer>
+		<s:Group  x="10" y="49" width="308" height="78">
+			<s:layout>
+				<s:BasicLayout/>
+			</s:layout>
+			<s:Label x="20" y="15" width="40" fontSize="14" height="16" text="From:"/>
+			<s:Label x="20" y="35" width="40" fontSize="14" height="16" text="To:" />
+			<s:Label x="20" y="55" width="40" fontSize="14" height="16" text="Type:" />
+			
+			<s:Label x="70" y="15" fontSize="12" height="14" width="236" fontWeight="bold" text="{predecessor.predTask.wbsName}"/>
+			<s:Label x="70" y="35" fontSize="12" height="14" width="236" fontWeight="bold" text="{predecessor.parentTask.wbsName}"/>
+			<s:Label x="70" y="55" fontSize="12" height="14" width="236" fontWeight="bold" text="{predecessor.type}"/>
+			
+			<s:Button x="47" y="82" label="delete" id="deleteBT" visible="false" />
+			<s:Button x="228" y="47" label="delete" visible="false"/>
+		</s:Group>
+	</s:BorderContainer>
+</s:Group>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="398" height="218" xmlns:local="*" 
+		 xmlns:methods="utils.methods.*" 
+		 xmlns:utils="utils.*">	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.CalendarLayoutChangeEvent;
+			
+			import planner.Task;
+			
+			import utils.Global;
+			import utils.Seating;
+			import utils.methods.dateToString;
+			
+			protected function save():void{
+				Global.project.start = projectStartDate.selectedDate;
+				Global.project.name = projectName.text;
+				Global.project.manager = projectManager.text;
+				Global.project.company = projectCompany.text;
+				Task.updateAll();
+				Global.closeAllPage();
+				Global.project.refresh();
+			}
+			
+		]]>
+	</fx:Script>
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+						   top="10" right="10" left="10" height="32" 
+						   backgroundColor="#ACB4CC"
+						   mouseDown="startDrag()"
+						   mouseUp="stopDrag()">
+			<s:Label top="10" left="15" right="35" text="Project" textAlign="center" fontWeight="bold" fontSize="16"/>
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="12" top="8" bottom="10"  width="13"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()"/>
+		</s:BorderContainer>
+		
+		<s:Label x="51" y="60" text="Start: "  height="18" fontSize="16"/>
+		<mx:DateField id="projectStartDate" x="90" y="55" selectedDate="{Global.project.start}"  width="155" enabled="{Seating.editor}"/>
+		
+		<s:Label x="10" y="90" text="Name:" width="80" fontSize="16" height="20" textAlign="right" verticalAlign="bottom"/>
+		<s:TextInput id="projectName" x="90" y="90" text="{Global.project.name}" width="298" enabled="{Seating.editor}"/>
+		
+		<s:Label x="10" y="120" text="Manager:" width="80" fontSize="16" height="20" textAlign="right" verticalAlign="bottom"/>
+		<s:TextInput id="projectManager" x="90" y="120" text="{Global.project.manager}" width="298" enabled="{Seating.editor}"/>
+		
+		<s:Label x="10" y="150" text="Company:" width="80" fontSize="16" height="20" textAlign="right" verticalAlign="bottom"/>
+		<s:TextInput id="projectCompany" x="90" y="150" text="{Global.project.company}" width="298" enabled="{Seating.editor}"/>
+		
+		<s:Button x="227" y="183" label="save" click="save()"/>
+		<s:Button x="310" y="183" label="cancel" click="Global.closeAllPage()"/>
+		
+	</s:BorderContainer>
+</s:Group>

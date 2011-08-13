@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:MXTreeItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Script>
+		<![CDATA[
+			import planner.Task;
+			import planner.WorkInterval;
+		]]>
+	</fx:Script>
+
+	
+	<s:states>
+		<s:State name="normal" />            
+		<s:State name="hovered" />
+		<s:State name="selected" />
+	</s:states>
+	<s:HGroup left="0" right="0" top="0" bottom="0" verticalAlign="middle" width="320" >
+		<s:Rect id="indentationSpacer" width="{treeListData.indent}" percentHeight="100" alpha="0">
+			<s:fill>
+				<s:SolidColor color="0xFFFFFF" />
+			</s:fill>
+		</s:Rect>
+		<s:Group id="disclosureGroup">
+			<s:BitmapImage source="{treeListData.disclosureIcon}" visible="{treeListData.hasChildren}" />
+		</s:Group>
+		<s:BitmapImage source="{treeListData.icon}" />
+		
+		<mx:Label id="labelField" text="{treeListData.label}" paddingTop="2" width="320" />
+	</s:HGroup>
+	
+	<mx:Label id="durationLabel" text="{data.workColumn}" paddingTop="2" right="10" width="50" textAlign="right" click="{durationLabel.visible=false;durationEditField.visible=true}"/>
+	<mx:TextInput id="durationEditField" text="{data.workColumn}" paddingTop="2" right="10" width="50" textAlign="right" visible="false" 
+				  focusOut="{durationLabel.visible=true;durationEditField.visible=false;data.workColumn=durationEditField.text}" />
+	
+</s:MXTreeItemRenderer>

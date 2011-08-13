@@ -1,0 +1,187 @@
+<project project-start="20091112T080000Z" mrproject-version="2" manager="" phase="" name="Pert project" calendar="0" company="Default">
+<properties />
+<phases />
+<calendars>
+<day-types>
+<day-type description="A default working day" name="Working" id="0" />
+<day-type description="A default non working day" name="Nonworking" id="1" />
+<day-type description="Use day from base calendar" name="Use base" id="2" />
+</day-types>
+<calendar name="Standard" id="1">
+<default-week wed="0" sat="1" fri="0" tue="0" mon="0" sun="1" thu="0" />
+<overridden-day-types>
+<overridden-day-type id="0">
+<interval start="0800" end="1200" />
+<interval start="1300" end="1700" />
+</overridden-day-type>
+</overridden-day-types>
+</calendar>
+</calendars>
+<tasks>
+<task type="normal" work="86400" name="Upgrade code from Flash10 to Flex4" scheduling="fixed-work" priority="1000" end="20091116T170000Z" id="1" start="20091112T080000Z" work-start="20091112T080000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T000000Z" />
+<predecessors />
+</task>
+<task type="normal" work="187200" name="Viewer" scheduling="fixed-work" priority="0" end="20091130T120000Z" id="9" start="20091116T170000Z" work-start="20091116T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="1" id="0" />
+</predecessors>
+<task type="normal" work="28800" name="create  TaskComponent" scheduling="fixed-work" priority="0" end="20091117T170000Z" id="3" start="20091116T170000Z" work-start="20091116T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091113T080000Z" />
+<predecessors />
+</task>
+<task type="normal" work="86400" name="Pert sprite" scheduling="fixed-work" priority="0" end="20091120T170000Z" id="4" start="20091117T170000Z" work-start="20091117T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="3" id="0" />
+</predecessors>
+<task type="normal" work="43200" name="draw TaskComponent on Pert sprite" scheduling="fixed-work" priority="0" end="20091119T120000Z" id="5" start="20091117T170000Z" work-start="20091117T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors />
+</task>
+<task type="normal" work="43200" name="draw Predecessors arrow" scheduling="fixed-work" priority="0" end="20091120T170000Z" id="6" start="20091119T120000Z" work-start="20091119T120000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="5" id="0" />
+</predecessors>
+</task>
+</task>
+<task type="normal" work="14400" name="Project Info Page" scheduling="fixed-work" priority="0" end="20091126T120000Z" id="21" start="20091125T170000Z" work-start="20091125T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="14" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="14400" name="Task info Page" scheduling="fixed-work" priority="0" end="20091126T170000Z" id="22" start="20091126T120000Z" work-start="20091126T120000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="21" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="43200" name="integration " scheduling="fixed-work" priority="0" end="20091130T120000Z" id="20" start="20091126T170000Z" work-start="20091126T170000Z" note="" percent-complete="80">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="22" id="0" />
+</predecessors>
+</task>
+</task>
+<task type="normal" work="334800" name="Editor" scheduling="fixed-work" priority="0" end="20091209T170000Z" id="10" start="20091120T170000Z" work-start="20091120T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors />
+<task type="normal" work="140400" name="create pages" scheduling="fixed-work" priority="0" end="20091204T170000Z" id="29" start="20091120T170000Z" work-start="20091120T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors />
+<task type="normal" work="75600" name="create EditPage for Task" scheduling="fixed-work" priority="0" end="20091125T110000Z" id="11" start="20091120T170000Z" work-start="20091120T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors />
+<task type="normal" work="28800" name="General Tab" scheduling="fixed-work" priority="0" end="20091123T170000Z" id="16" start="20091120T170000Z" work-start="20091120T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="6" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="21600" name="Predecessors Tab" scheduling="fixed-work" priority="0" end="20091124T150000Z" id="17" start="20091123T170000Z" work-start="20091123T170000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="16" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="21600" name="Resourcecs Tab" scheduling="fixed-work" priority="0" end="20091125T100000Z" id="18" start="20091124T150000Z" work-start="20091124T150000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="17" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="3600" name="Note Tab" scheduling="fixed-work" priority="0" end="20091125T110000Z" id="19" start="20091125T100000Z" work-start="20091125T100000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="18" id="0" />
+</predecessors>
+</task>
+</task>
+<task type="normal" work="21600" name="create EditPage for Project" scheduling="fixed-work" priority="0" end="20091125T170000Z" id="14" start="20091125T110000Z" work-start="20091125T110000Z" note="" percent-complete="100">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="19" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="43200" name="create EditPage for Resources" scheduling="fixed-work" priority="0" end="20091204T170000Z" id="28" start="20091203T120000Z" work-start="20091203T120000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="27" id="0" />
+</predecessors>
+</task>
+</task>
+<task type="normal" work="194400" name="functionals" scheduling="fixed-work" priority="0" end="20091209T170000Z" id="13" start="20091130T120000Z" work-start="20091130T120000Z" note="" percent-complete="20">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors />
+<task type="normal" work="14400" name="project page" scheduling="fixed-work" priority="0" end="20091130T170000Z" id="23" start="20091130T120000Z" work-start="20091130T120000Z" note="" percent-complete="80">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="20" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="21600" name="general tab" scheduling="fixed-work" priority="0" end="20091201T150000Z" id="24" start="20091130T170000Z" work-start="20091130T170000Z" note="" percent-complete="50">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="23" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="21600" name="predecessor tab" scheduling="fixed-work" priority="0" end="20091202T100000Z" id="25" start="20091201T150000Z" work-start="20091201T150000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="24" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="21600" name="resources tab" scheduling="fixed-work" priority="0" end="20091202T160000Z" id="26" start="20091202T100000Z" work-start="20091202T100000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="25" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="28800" name="notes tab" scheduling="fixed-work" priority="0" end="20091203T120000Z" id="27" start="20091202T160000Z" work-start="20091202T160000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="26" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="28800" name="resources page" scheduling="fixed-work" priority="0" end="20091207T170000Z" id="31" start="20091204T170000Z" work-start="20091204T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="28" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="57600" name="task menu functional" scheduling="fixed-work" priority="0" end="20091209T170000Z" id="12" start="20091207T170000Z" work-start="20091207T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="31" id="0" />
+</predecessors>
+</task>
+</task>
+</task>
+<task type="normal" work="28800" name="Testing" scheduling="fixed-work" priority="0" end="20091210T170000Z" id="8" start="20091209T170000Z" work-start="20091209T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="13" id="0" />
+</predecessors>
+</task>
+<task type="normal" work="28800" name="Bug fixing" scheduling="fixed-work" priority="0" end="20091211T170000Z" id="7" start="20091210T170000Z" work-start="20091210T170000Z" note="" percent-complete="0">
+<constraint type="start-no-earlier-than" time="20091112T080000Z" />
+<predecessors>
+<predecessor type="FS" predecessor-id="8" id="0" />
+</predecessors>
+</task>
+</tasks>
+<resource-groups />
+<resources>
+<resource type="1" std-rate="0" note="" email="" name="Robert" short-name="" units="0" id="1" />
+<resource type="1" std-rate="0" note="" email="" name="ds" short-name="" units="0" id="2" />
+</resources>
+<allocations>
+<allocation resource-id="1" task-id="3" units="33.5" />
+<allocation resource-id="1" task-id="5" units="20" />
+<allocation resource-id="1" task-id="6" units="50" />
+<allocation resource-id="1" task-id="1" units="10" />
+</allocations>
+</project>

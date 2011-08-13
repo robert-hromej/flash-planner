@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controllers:TaskListViewController xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:controllers="app.controllers.*">
+	<controllers:layout>
+		<s:BasicLayout/>
+	</controllers:layout>
+	
+	<mx:Tree id="tree" verticalScrollPosition="12" itemClose="refreshList()" itemOpen="refreshList()" 
+			 itemRenderer="renderers.TaskTreeRenderer" 
+			 left="0" top="0" bottom="0" right="0" dataProvider="{dataProvider}" 
+			 dragMoveEnabled="true">
+		
+	</mx:Tree>
+	
+</controllers:TaskListViewController>

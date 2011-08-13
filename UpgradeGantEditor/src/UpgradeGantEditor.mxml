@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   width="1158" height="530" xmlns:views="app.views.*"
+			   creationComplete="afterCreate()"
+			   preinitialize="beforeCreate()"
+			   backgroundColor="0xdddddd">
+	
+	<fx:Script source="init.as"/>
+	<fx:Script source="full_screen.as"/>
+	
+	<mx:Image id="fullscreenEnterBT" right="10" top="5" width="24" height="18" source="@Embed('assets/img/fullscreen-enter.png')" 
+			  useHandCursor="true" buttonMode="true" visible="true" click="fullscreenEnter()" /> 
+	<mx:Image id="fullscreenExitBT" right="10" top="5" width="24" height="18" source="@Embed('assets/img/fullscreen-exit.png')" 
+			  useHandCursor="true" buttonMode="true" visible="false" click="fullscreenExit()" /> 
+	
+	<views:GantView id="gant" top="30" left="10" right="10" bottom="10"/>
+	
+</s:Application>

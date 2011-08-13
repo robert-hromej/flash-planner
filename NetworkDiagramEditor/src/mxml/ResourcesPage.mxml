@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="502" height="276" xmlns:local="*">
+	<fx:Script>
+		<![CDATA[
+			import utils.Seating;
+			import utils.Global;
+			import mxml.cellRenderer.ResourceDeleteCell;
+			import planner.Resource;
+		]]>
+	</fx:Script>
+	
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+				  top="10" right="10" left="10" height="32" 
+				  backgroundColor="#ACB4CC"
+				  mouseDown="startDrag()"
+				  mouseUp="stopDrag()">
+			<s:Label top="10" left="15" right="35" text="Resources" textAlign="center" fontWeight="bold" fontSize="16"/>
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="12" top="8" bottom="10"  width="13"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()"/>
+		</s:BorderContainer>
+		<mx:DataGrid id="resourcesTable" left="10" right="10" top="46" bottom="42" dataProvider="{Global.project.resources}" editable="{Seating.editor}">
+			<mx:columns>
+				<mx:DataGridColumn headerText="id" dataField="id" minWidth="30" width="35" editable="false"/>
+				<mx:DataGridColumn headerText="Resource Name" dataField="name" minWidth="300" width="300" editable="true"  />
+				<mx:DataGridColumn headerText="Short Name" dataField="short_name" minWidth="100" width="105" editable="true"/>
+				<mx:DataGridColumn headerText="" minWidth="30" width="30" editable="false" itemRenderer="mxml.cellRenderer.ResourceDeleteCell" visible="{Seating.editor}"/>
+			</mx:columns>
+		</mx:DataGrid>
+		
+		<s:Label left="10" bottom="10" visible="{Seating.editor}"
+				 text="Name:" height="20" verticalAlign="middle" fontSize="16" fontWeight="bold"/>
+		<s:TextInput id="resourceName" left="60" right="66" bottom="10"  visible="{Seating.editor}"/>
+		<s:Button right="10" bottom="10" label="add" width="48" visible="{Seating.editor}"
+				  click="Resource.create(resourceName.text);resourcesTable.dataProvider=Global.project.resources"/>
+		
+	</s:BorderContainer>
+</s:Group>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 creationComplete="init()" 
+		 width="200" height="40">
+	
+	<fx:Script>
+		<![CDATA[			
+			import mx.core.UIComponent;
+			
+			import planner.Predecessor;
+			import planner.Task;
+			
+			import utils.Global;
+			import utils.Seating;
+			import utils.methods.dateToString;
+			
+			private var _task:Task
+			
+			public var startPoint:Point = new Point()
+			public var endPoint:Point = new Point()
+				
+			public var cm:ContextMenu = new ContextMenu()
+			
+			protected function init():void{
+				refresh()
+			}
+			
+			
+			private function mMove(ev:MouseEvent):void{
+				refreshPredecessorArrow()
+			}
+			
+			private function mDown(ev:MouseEvent):void{
+				Global.tasksContainer.addElement(this)
+				startDrag()
+				addEventListener(MouseEvent.MOUSE_MOVE, mMove)
+				addEventListener(MouseEvent.MOUSE_UP, mUp)
+			}
+			
+			private function mUp(ev:MouseEvent):void{
+				stopDrag()
+				removeEventListener(MouseEvent.MOUSE_MOVE, mMove)
+			}
+			
+			public function get task():Task{
+				return _task;
+			}
+
+			public function set task(t:Task):void{
+				_task = t
+				
+//				var backRect:UIComponent = new UIComponent()
+//					addElement(backRect)
+				
+				backRect.graphics.beginFill(0xcccccc)
+				backRect.graphics.lineStyle(2,0x000000)
+				if (task.isMilestone()){
+					backRect.graphics.moveTo(10,0)
+					backRect.graphics.lineTo(190,0)
+					backRect.graphics.lineTo(200,20)
+					backRect.graphics.lineTo(190,40)
+					backRect.graphics.lineTo(10,40)
+					backRect.graphics.lineTo(0,20)
+				}else if (task.isParent()){
+					backRect.graphics.moveTo(10,0)
+					backRect.graphics.lineTo(200,0)
+					backRect.graphics.lineTo(190,40)
+					backRect.graphics.lineTo(0,40)
+				}else{
+					if (Task.criticPath.indexOf(t) != -1){
+						backRect.graphics.lineStyle(2,0xff0000)
+					}else{
+						backRect.graphics.lineStyle(2,0x0000ff)
+					}
+					backRect.graphics.beginFill(0xddddff)
+					backRect.graphics.drawRect(0,0,200,40)
+				}
+				
+				x = task.parentLevel*150
+				y = task.index*53
+					
+				refreshPredecessorArrow()
+			}
+			
+			public function refresh():void{
+				taskName.text = task.wbsName
+				duration.text = "duration:" + task.workColumn
+				start.text = "start:" + dateToString(task.start)
+				end.text = "finish:" + dateToString(task.end)
+			}
+			
+			private function refreshPredecessorArrow():void{
+				startPoint.x = x
+				startPoint.y = y + 15
+				endPoint.x = x
+				endPoint.y = y + 15
+				if (task.isMilestone()){
+					startPoint.x += 200
+					endPoint.x += 0
+				}else if (task.isParent()){
+					startPoint.x += 195
+					endPoint.x += 5
+				}else{
+					startPoint.x += 200
+					endPoint.x += 0
+				}
+				
+				var pred:Predecessor
+				
+				for each(pred in task.predecessors){
+					pred.arrow.refresh()
+				}
+				
+				for each(var t:Task in task.childPredecessors()){
+					for each(pred in t.predecessors){
+						pred.arrow.refresh()
+					}
+				}
+				
+				if (task.arrow){
+					task.arrow.refresh()
+				}
+				
+				for each(var ch:Task in task.subTasks){
+					ch.arrow.refresh()
+				}
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<mx:UIComponent id="backRect"/>
+	
+	<s:Group id="taskInfoBox" x="15" y="5" width="170" height="36">
+		<s:Label id="taskName" fontWeight="bold" fontSize="9" text="task name" width="180"/>
+		<s:Label id="duration" x="0" width="100" height="10" y="12" fontSize="9"/>
+		<s:Label id="start" x="0" width="80" height="10" y="24" fontSize="9"/>
+		<s:Label id="end" x="80" width="80" height="10" y="24" fontSize="9"/>
+	</s:Group>
+	
+</s:Group>

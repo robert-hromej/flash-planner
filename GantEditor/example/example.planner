@@ -1,0 +1,753 @@
+<project calendar="1" project-start="20080601T080000Z" manager="Copyright © 1999 - 2008 by GS Design, Inc." company="B4UBUILD.COM - http://www.b4ubuild.com/" name="" mrproject-version="2"> 
+	<calendars> 
+		<day-types> 
+			<day-type description="A default working day" name="Working" id="0" /> 
+			<day-type description="A default non working day" name="Nonworking" id="1" /> 
+			<day-type description="Use day from base calendar" name="Use base" id="2" /> 
+		</day-types> 
+		<calendar id="1" name="Standard"> 
+			<default-week sun="1" sat="1" fri="0" thu="0" wed="0" tue="0" mon="0" /> 
+			<overridden-day-types> 
+				<overridden-day-type id="0"> 
+					<interval end="1200" start="0800" /> 
+					<interval end="1700" start="1300" /> 
+				</overridden-day-type> 
+			</overridden-day-types> 
+			<days /> 
+			<calendar id="2" name="Sales Department"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="3" name="Construction Dept."> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="4" name="Sales Dept."> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="5" name="Client"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="6" name="County"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="7" name="County Sediment Control Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="8" name="Sediment Control Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="9" name="Department of Permits &amp; Licenses"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="10" name="Building Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="11" name="Mason"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="12" name="Civil Engineer"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="13" name="Concrete Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="14" name="Concrete Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="15" name="Excavation Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="16" name="Masonry Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="17" name="Block Masonry Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="18" name="Steel Supplier"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="19" name="Lumber Supplier"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="20" name="Waterproofing Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="21" name="Lender"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="22" name="Framing Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="23" name="Pest Control Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="24" name="Mechanical Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="25" name="Plumbing Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="26" name="Field Superintendent"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="27" name="Plumbing Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="28" name="Electrical Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="29" name="Alarm Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="30" name="Client's Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="31" name="Electrical Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="32" name="Roofing Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="33" name="Exterior Trim Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="34" name="Brick Masonry Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="35" name="Insulation Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="36" name="BGE Inspector"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="37" name="Drywall Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="38" name="Painting Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="39" name="Trim Supplier"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="40" name="Interior Trim Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="41" name="Cabinet Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="42" name="Deck Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="43" name="Driveway Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="44" name="Seeding Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="45" name="Hardware Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="46" name="Mirror Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="47" name="Tile Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="48" name="Hardwood Floor Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="49" name="Carpet Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="50" name="Department of Licensing &amp; Permits"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="51" name="Paint Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="52" name="Window Cleaning Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="53" name="Cleaning Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="54" name="Superintendent"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="55" name="Builder"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="56" name="Punch Out Crew"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="57" name="Stucco Subcontractor"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="58" name="Sales Manager"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="59" name="Construction Manager"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="60" name="Project Manager"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+			<calendar id="61" name="Unnamed Resource"> 
+				<default-week sun="2" sat="2" fri="2" thu="2" wed="2" tue="2" mon="2" /> 
+				<overridden-day-types /> 
+				<days /> 
+			</calendar> 
+		</calendar> 
+	</calendars> 
+	<tasks> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="30412800" work-start="20080601T080000Z" end="20080903T170000Z" start="20080601T000000Z" note="This file is a partial schedule for trial use &amp; inspection purposes only. Should you wish to purchase the file that contains the entire schedule, visit:&#xA;&#xA;www.B4UBUILD.COM&#xA;&#xA;You may also send a check or money order in the amount of $20.00 (USD) payable to:&#xA;&#xA;B4UBUILD.COM&#xA;10 Owl Branch Lane&#xA;Parkton, MD 21120-9522&#xA;&#xA;Please include your email address and registered owner contact information in your correspondence so that the full working file and a password, which unlocks it, may be sent to you. &#xA;" name="b4ubuild_sample_07a" id="0"> 
+			<predecessors /> 
+			<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Contracts" id="145"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Supply Lot Sale Agreement" id="287"> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Supply Construction Agreement" id="273"> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Supply Contract Plans" id="2"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="273" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Supply Contract Specifications" id="262"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="273" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Supply Contract Site Plan" id="3"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="273" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Secure Financing" id="289"> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080601T080000Z" end="20080601T080000Z" start="20080601T000000Z" note="" name="Construction Loan Settlement" id="290"> 
+					<predecessors /> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="9446400" work-start="20080602T080000Z" end="20080704T170000Z" start="20080602T000000Z" note="" name="Document Review &amp; Revision" id="274"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="3456000" work-start="20080602T080000Z" end="20080620T170000Z" start="20080602T000000Z" note="" name="Review &amp; Finalize Plans" id="275"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="2" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="4608000" work-start="20080602T080000Z" end="20080627T170000Z" start="20080602T000000Z" note="" name="Review &amp; Finalize Specifications" id="276"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="262" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080623T080000Z" end="20080623T170000Z" start="20080623T000000Z" note="" name="Review &amp; Finalize Site Plan" id="277"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="3" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="275" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="1152000" work-start="20080630T080000Z" end="20080704T170000Z" start="20080630T000000Z" note="" name="Print Construction Drawings" id="282"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="275" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="276" id="2" /> 
+						<predecessor lag="0" type="FS" predecessor-id="277" id="3" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080704T170000Z" end="20080704T170000Z" start="20080704T000000Z" note="" name="Approve Revised Plans" id="284"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="282" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080704T170000Z" end="20080704T170000Z" start="20080704T000000Z" note="" name="Approve Revised Specifications" id="285"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="282" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080704T170000Z" end="20080704T170000Z" start="20080704T000000Z" note="" name="Approve Revised Site Plan" id="291"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="282" id="1" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="7142400" work-start="20080707T080000Z" end="20080807T170000Z" start="20080707T000000Z" note="" name="Bids &amp; Contracts" id="4"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="691200" work-start="20080707T080000Z" end="20080709T170000Z" start="20080707T000000Z" note="" name="Make Copies of Plans" id="146"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="284" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="460800" work-start="20080707T080000Z" end="20080708T170000Z" start="20080707T000000Z" note="" name="Make Copies of Specifications" id="278"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="285" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080710T080000Z" end="20080710T170000Z" start="20080710T000000Z" note="" name="Distribute Plans &amp; Specifications" id="5"> 
+					<constraint time="19960817T080000Z" type="start-no-earlier-than" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="146" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="278" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="2304000" work-start="20080711T080000Z" end="20080724T170000Z" start="20080711T000000Z" note="" name="Receive Bids" id="6"> 
+					<constraint time="19960817T080000Z" type="start-no-earlier-than" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="5" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="2304000" work-start="20080725T080000Z" end="20080731T170000Z" start="20080725T000000Z" note="" name="Review Bids" id="7"> 
+					<predecessors /> 
+					<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="1152000" work-start="20080725T080000Z" end="20080731T170000Z" start="20080725T000000Z" note="" name="Sales" id="279"> 
+						<predecessors> 
+							<predecessor lag="0" type="FS" predecessor-id="6" id="1" /> 
+						</predecessors> 
+					</task> 
+					<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="1152000" work-start="20080725T080000Z" end="20080731T170000Z" start="20080725T000000Z" note="" name="Construction" id="280"> 
+						<predecessors> 
+							<predecessor lag="0" type="FS" predecessor-id="6" id="1" /> 
+						</predecessors> 
+					</task> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="1152000" work-start="20080801T080000Z" end="20080807T170000Z" start="20080801T000000Z" note="" name="Execute Subcontractor Agreements" id="8"> 
+					<constraint time="19960817T080000Z" type="start-no-earlier-than" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="279" id="1" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="5990400" work-start="20080707T080000Z" end="20080729T170000Z" start="20080707T000000Z" note="" name="Grading &amp; Building Permits" id="9"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080707T080000Z" end="20080707T170000Z" start="20080707T000000Z" note="" name="Schedule lot stake-out" id="10"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="282" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080711T080000Z" end="20080711T170000Z" start="20080711T000000Z" note="" name="Stake lot" id="11"> 
+					<predecessors> 
+						<predecessor lag="86400" type="FS" predecessor-id="10" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080707T080000Z" end="20080707T170000Z" start="20080707T000000Z" note="" name="File Grading Permit Application" id="293"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="291" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="691200" work-start="20080707T080000Z" end="20080709T170000Z" start="20080707T000000Z" note="" name="File Building Permit Application" id="12"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="284" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="285" id="2" /> 
+						<predecessor lag="0" type="FS" predecessor-id="291" id="3" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080714T080000Z" end="20080714T170000Z" start="20080714T000000Z" note="" name="Post Lot Identification" id="13"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="11" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="293" id="2" /> 
+						<predecessor lag="0" type="FS" predecessor-id="12" id="3" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080715T080000Z" end="20080715T170000Z" start="20080715T000000Z" note="" name="Meet Sediment Control Inspector" id="15"> 
+					<predecessors> 
+						<predecessor lag="57600" type="FS" predecessor-id="293" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="11" id="2" /> 
+						<predecessor lag="0" type="FS" predecessor-id="13" id="3" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080716T080000Z" end="20080716T170000Z" start="20080716T000000Z" note="" name="Walk Lot w/ Owner" id="14"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="15" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080717T080000Z" end="20080717T170000Z" start="20080717T000000Z" note="" name="Install Construction Entrance" id="16"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="15" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="14" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="460800" work-start="20080717T080000Z" end="20080718T170000Z" start="20080717T000000Z" note="" name="Install Sediment Controls" id="153"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="15" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="14" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080721T080000Z" end="20080721T170000Z" start="20080721T000000Z" note="" name="Sediment Control Insp." id="17"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="16" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="153" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080722T080000Z" end="20080722T170000Z" start="20080722T000000Z" note="" name="Grading Permit Issued" id="18"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="17" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="2304000" work-start="20080710T080000Z" end="20080723T170000Z" start="20080710T000000Z" note="" name="County Permit Process" id="147"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="12" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080724T080000Z" end="20080724T170000Z" start="20080724T000000Z" note="" name="Building Permit Approved" id="19"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="147" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="18" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080729T080000Z" end="20080729T170000Z" start="20080729T000000Z" note="" name="Pay Permit Fees and Excise Taxes" id="281"> 
+					<predecessors> 
+						<predecessor lag="57600" type="FS" predecessor-id="19" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080729T170000Z" end="20080729T170000Z" start="20080729T000000Z" note="" name="Building Permit Issued" id="294"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="281" id="1" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="1843200" work-start="20080723T080000Z" end="20080731T170000Z" start="20080723T000000Z" note="" name="Site Work" id="20"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="691200" work-start="20080723T080000Z" end="20080725T170000Z" start="20080723T000000Z" note="" name="Clear Lot" id="21"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="18" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080728T080000Z" end="20080728T170000Z" start="20080728T000000Z" note="" name="Strip Topsoil &amp; Stockpile" id="22"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="21" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080728T080000Z" end="20080728T170000Z" start="20080728T000000Z" note="" name="Stake Lot for Excavation" id="23"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="21" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080729T080000Z" end="20080729T170000Z" start="20080729T000000Z" note="" name="Rough grade lot" id="24"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="21" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="23" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="460800" work-start="20080730T080000Z" end="20080731T170000Z" start="20080730T000000Z" note="" name="Excavate for foundation" id="25"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="19" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="23" id="2" /> 
+						<predecessor lag="0" type="FS" predecessor-id="21" id="3" /> 
+						<predecessor lag="0" type="FS" predecessor-id="24" id="4" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="5990400" work-start="20080801T080000Z" end="20080903T170000Z" start="20080801T000000Z" note="" name="Foundation" id="26"> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080801T080000Z" end="20080801T170000Z" start="20080801T000000Z" note="" name="Layout footings" id="27"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="25" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080804T080000Z" end="20080804T170000Z" start="20080804T000000Z" note="" name="Dig Footings &amp; Install Reinforcing" id="28"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="27" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080804T170000Z" end="20080804T170000Z" start="20080804T000000Z" note="" name="Footing Inspection" id="29"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="28" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080805T080000Z" end="20080805T170000Z" start="20080805T000000Z" note="" name="Pour footings" id="30"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="29" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080806T080000Z" end="20080806T170000Z" start="20080806T000000Z" note="" name="Pin Footings" id="31"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="30" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080807T080000Z" end="20080807T170000Z" start="20080807T000000Z" note="" name="Stock Block, Mortar, Sand" id="32"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="31" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="3456000" work-start="20080808T080000Z" end="20080828T170000Z" start="20080808T000000Z" note="" name="Build Block Foundation" id="33"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="31" id="1" /> 
+						<predecessor lag="0" type="FS" predecessor-id="32" id="2" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080828T170000Z" end="20080828T170000Z" start="20080828T000000Z" note="" name="Foundation Certification" id="35"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="33" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20080828T170000Z" end="20080828T170000Z" start="20080828T000000Z" note="" name="Draw #1 (Location Survey)" id="310"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="35" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080829T080000Z" end="20080829T170000Z" start="20080829T000000Z" note="" name="Fill Block Cores w/ Concrete" id="36"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="33" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080901T080000Z" end="20080901T170000Z" start="20080901T000000Z" note="" name="Steel Delivery" id="34"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="36" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="460800" work-start="20080902T080000Z" end="20080903T170000Z" start="20080902T000000Z" note="" name="Set Lintels, Bolts, Cap Block" id="37"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="34" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080901T080000Z" end="20080901T170000Z" start="20080901T000000Z" note="" name="Lumber Delivery" id="39"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="36" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="230400" work-start="20080902T080000Z" end="20080902T170000Z" start="20080902T000000Z" note="" name="Waterproofing and Drain Tile" id="38"> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="39" id="1" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+		</task> 
+	</tasks> 
+	<resources> 
+		<resource calendar="61" note="" units="0" type="1" name="" id="0" /> 
+		<resource calendar="2" note="" units="0" type="1" short-name="S" name="Sales Department" id="1" /> 
+		<resource calendar="3" note="" units="0" type="1" short-name="C" name="Construction Dept." id="2" /> 
+		<resource calendar="4" note="" units="0" type="1" short-name="S" name="Sales Dept." id="3" /> 
+		<resource calendar="5" note="" units="0" type="1" short-name="C" name="Client" id="10" /> 
+		<resource calendar="6" note="" units="0" type="1" short-name="C" name="County" id="13" /> 
+		<resource calendar="7" note="" units="0" type="1" short-name="C" name="County Sediment Control Inspector" id="14" /> 
+		<resource calendar="8" note="" units="0" type="1" short-name="S" name="Sediment Control Inspector" id="15" /> 
+		<resource calendar="9" note="" units="0" type="1" short-name="D" name="Department of Permits &amp; Licenses" id="16" /> 
+		<resource calendar="10" note="" units="0" type="1" short-name="B" name="Building Inspector" id="19" /> 
+		<resource calendar="11" note="" units="0" type="1" short-name="M" name="Mason" id="20" /> 
+		<resource calendar="12" note="" units="0" type="1" short-name="C" name="Civil Engineer" id="21" /> 
+		<resource calendar="13" note="" units="0" type="1" short-name="C" name="Concrete Subcontractor" id="22" /> 
+		<resource calendar="14" note="" units="0" type="1" short-name="C" name="Concrete Subcontractor" id="23" /> 
+		<resource calendar="15" note="" units="0" type="1" short-name="E" name="Excavation Subcontractor" id="24" /> 
+		<resource calendar="16" note="" units="0" type="1" short-name="M" name="Masonry Subcontractor" id="25" /> 
+		<resource calendar="17" note="" units="0" type="1" short-name="B" name="Block Masonry Subcontractor" id="26" /> 
+		<resource calendar="18" note="" units="0" type="1" short-name="S" name="Steel Supplier" id="27" /> 
+		<resource calendar="19" note="" units="0" type="1" short-name="L" name="Lumber Supplier" id="28" /> 
+		<resource calendar="20" note="" units="0" type="1" short-name="W" name="Waterproofing Subcontractor" id="29" /> 
+		<resource calendar="21" note="" units="0" type="1" short-name="L" name="Lender" id="30" /> 
+		<resource calendar="22" note="" units="0" type="1" short-name="F" name="Framing Subcontractor" id="31" /> 
+		<resource calendar="23" note="" units="0" type="1" short-name="P" name="Pest Control Subcontractor" id="32" /> 
+		<resource calendar="24" note="" units="0" type="1" short-name="M" name="Mechanical Subcontractor" id="33" /> 
+		<resource calendar="25" note="" units="0" type="1" short-name="P" name="Plumbing Subcontractor" id="34" /> 
+		<resource calendar="26" note="" units="0" type="1" short-name="F" name="Field Superintendent" id="35" /> 
+		<resource calendar="27" note="" units="0" type="1" short-name="P" name="Plumbing Inspector" id="36" /> 
+		<resource calendar="28" note="" units="0" type="1" short-name="E" name="Electrical Subcontractor" id="37" /> 
+		<resource calendar="29" note="" units="0" type="1" short-name="A" name="Alarm Subcontractor" id="38" /> 
+		<resource calendar="30" note="" units="0" type="1" short-name="C" name="Client's Subcontractor" id="39" /> 
+		<resource calendar="31" note="" units="0" type="1" short-name="E" name="Electrical Inspector" id="40" /> 
+		<resource calendar="32" note="" units="0" type="1" short-name="R" name="Roofing Subcontractor" id="41" /> 
+		<resource calendar="33" note="" units="0" type="1" short-name="E" name="Exterior Trim Subcontractor" id="42" /> 
+		<resource calendar="34" note="" units="0" type="1" short-name="B" name="Brick Masonry Subcontractor" id="44" /> 
+		<resource calendar="35" note="" units="0" type="1" short-name="I" name="Insulation Subcontractor" id="45" /> 
+		<resource calendar="36" note="" units="0" type="1" short-name="B" name="BGE Inspector" id="46" /> 
+		<resource calendar="37" note="" units="0" type="1" short-name="D" name="Drywall Subcontractor" id="47" /> 
+		<resource calendar="38" note="" units="0" type="1" short-name="P" name="Painting Subcontractor" id="48" /> 
+		<resource calendar="39" note="" units="0" type="1" short-name="T" name="Trim Supplier" id="49" /> 
+		<resource calendar="40" note="" units="0" type="1" short-name="I" name="Interior Trim Subcontractor" id="50" /> 
+		<resource calendar="41" note="" units="0" type="1" short-name="C" name="Cabinet Subcontractor" id="51" /> 
+		<resource calendar="42" note="" units="0" type="1" short-name="D" name="Deck Subcontractor" id="54" /> 
+		<resource calendar="43" note="" units="0" type="1" short-name="D" name="Driveway Subcontractor" id="55" /> 
+		<resource calendar="44" note="" units="0" type="1" short-name="S" name="Seeding Subcontractor" id="56" /> 
+		<resource calendar="45" note="" units="0" type="1" short-name="H" name="Hardware Subcontractor" id="57" /> 
+		<resource calendar="46" note="" units="0" type="1" short-name="M" name="Mirror Subcontractor" id="58" /> 
+		<resource calendar="47" note="" units="0" type="1" short-name="T" name="Tile Subcontractor" id="59" /> 
+		<resource calendar="48" note="" units="0" type="1" short-name="H" name="Hardwood Floor Subcontractor" id="60" /> 
+		<resource calendar="49" note="" units="0" type="1" short-name="C" name="Carpet Subcontractor" id="61" /> 
+		<resource calendar="50" note="" units="0" type="1" short-name="D" name="Department of Licensing &amp; Permits" id="62" /> 
+		<resource calendar="51" note="" units="0" type="1" short-name="P" name="Paint Subcontractor" id="63" /> 
+		<resource calendar="52" note="" units="0" type="1" short-name="W" name="Window Cleaning Subcontractor" id="64" /> 
+		<resource calendar="53" note="" units="0" type="1" short-name="C" name="Cleaning Subcontractor" id="65" /> 
+		<resource calendar="54" note="" units="0" type="1" short-name="S" name="Superintendent" id="66" /> 
+		<resource calendar="55" note="" units="0" type="1" short-name="B" name="Builder" id="67" /> 
+		<resource calendar="56" note="" units="0" type="1" short-name="P" name="Punch Out Crew" id="68" /> 
+		<resource calendar="57" note="" units="0" type="1" short-name="S" name="Stucco Subcontractor" id="69" /> 
+		<resource calendar="58" note="" units="0" type="1" short-name="S" name="Sales Manager" id="70" /> 
+		<resource calendar="59" note="" units="0" type="1" short-name="C" name="Construction Manager" id="71" /> 
+		<resource calendar="60" note="" units="0" type="1" short-name="P" name="Project Manager" id="72" /> 
+	</resources> 
+	<allocations> 
+		<allocation units="100" resource-id="67" task-id="287" /> 
+		<allocation units="100" resource-id="67" task-id="273" /> 
+		<allocation units="100" resource-id="67" task-id="2" /> 
+		<allocation units="100" resource-id="67" task-id="262" /> 
+		<allocation units="100" resource-id="67" task-id="3" /> 
+		<allocation units="100" resource-id="10" task-id="289" /> 
+		<allocation units="100" resource-id="10" task-id="290" /> 
+		<allocation units="100" resource-id="67" task-id="275" /> 
+		<allocation units="100" resource-id="67" task-id="276" /> 
+		<allocation units="100" resource-id="67" task-id="277" /> 
+		<allocation units="100" resource-id="67" task-id="282" /> 
+		<allocation units="100" resource-id="10" task-id="284" /> 
+		<allocation units="100" resource-id="10" task-id="285" /> 
+		<allocation units="100" resource-id="10" task-id="291" /> 
+		<allocation units="100" resource-id="67" task-id="146" /> 
+		<allocation units="100" resource-id="67" task-id="278" /> 
+		<allocation units="100" resource-id="67" task-id="5" /> 
+		<allocation units="100" resource-id="67" task-id="6" /> 
+		<allocation units="100" resource-id="67" task-id="279" /> 
+		<allocation units="100" resource-id="67" task-id="280" /> 
+		<allocation units="100" resource-id="67" task-id="8" /> 
+		<allocation units="100" resource-id="67" task-id="10" /> 
+		<allocation units="100" resource-id="21" task-id="11" /> 
+		<allocation units="100" resource-id="67" task-id="293" /> 
+		<allocation units="100" resource-id="67" task-id="12" /> 
+		<allocation units="100" resource-id="67" task-id="13" /> 
+		<allocation units="100" resource-id="67" task-id="15" /> 
+		<allocation units="100" resource-id="67" task-id="14" /> 
+		<allocation units="100" resource-id="24" task-id="16" /> 
+		<allocation units="100" resource-id="24" task-id="153" /> 
+		<allocation units="100" resource-id="15" task-id="17" /> 
+		<allocation units="100" resource-id="15" task-id="18" /> 
+		<allocation units="100" resource-id="16" task-id="147" /> 
+		<allocation units="100" resource-id="16" task-id="19" /> 
+		<allocation units="100" resource-id="67" task-id="281" /> 
+		<allocation units="100" resource-id="16" task-id="294" /> 
+		<allocation units="100" resource-id="24" task-id="21" /> 
+		<allocation units="100" resource-id="24" task-id="22" /> 
+		<allocation units="100" resource-id="21" task-id="23" /> 
+		<allocation units="100" resource-id="24" task-id="24" /> 
+		<allocation units="100" resource-id="24" task-id="25" /> 
+		<allocation units="100" resource-id="23" task-id="27" /> 
+		<allocation units="100" resource-id="23" task-id="28" /> 
+		<allocation units="100" resource-id="19" task-id="29" /> 
+		<allocation units="100" resource-id="23" task-id="30" /> 
+		<allocation units="100" resource-id="21" task-id="31" /> 
+		<allocation units="100" resource-id="26" task-id="32" /> 
+		<allocation units="100" resource-id="26" task-id="33" /> 
+		<allocation units="100" resource-id="21" task-id="35" /> 
+		<allocation units="100" resource-id="30" task-id="310" /> 
+		<allocation units="100" resource-id="26" task-id="36" /> 
+		<allocation units="100" resource-id="27" task-id="34" /> 
+		<allocation units="100" resource-id="26" task-id="37" /> 
+		<allocation units="100" resource-id="28" task-id="39" /> 
+		<allocation units="100" resource-id="29" task-id="38" /> 
+	</allocations> 
+</project>

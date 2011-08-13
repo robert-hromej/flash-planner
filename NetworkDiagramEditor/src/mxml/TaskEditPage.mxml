@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="484" height="302"
+		 creationComplete="init()" 
+		 xmlns:methods="utils.methods.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import utils.Global;
+			import mx.collections.ArrayCollection;
+			import utils.methods.dateToString;
+			import mxml.cellRenderer.PredecessorListCell;
+			
+			import planner.Resource;
+			import planner.Task;
+			
+			private var _task:Task
+			
+//			private var cm:ContextMenu;
+
+			[Bindable]
+			private var lastRollOverIndex:Number
+			
+			[Bindable]
+			private var resources:ArrayCollection
+			
+			[Bindable]
+			private var allResources:ArrayCollection
+			
+			public function set task(t:Task):void{
+				_task = t
+				resources = new ArrayCollection(task.resources)
+				allResources = new ArrayCollection()
+				for each(var res:Resource in Global.project.resources){
+					if (task.resources.indexOf(res) == -1){
+						allResources.addItem(res)
+					}
+				}
+			}
+			
+			[Bindable] public function get task():Task{
+				return _task
+			}
+
+
+			protected function init():void{
+//				var cmi:ContextMenuItem = new ContextMenuItem("delete this predecessor");
+//					cmi.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, contextMenuItem_menuItemSelect);
+//					
+//				function contextMenuItem_menuItemSelect(ev:Event):void{
+//				 	predecessors.selectedIndex = lastRollOverIndex;
+//				}
+//					
+//				cm = new ContextMenu();
+//				cm.hideBuiltInItems();
+//				cm.customItems = [cmi];
+			}
+
+
+			protected function save():void{
+//				General Tab
+				task.name = nameField.text
+				task.constraintDate = dateField.selectedDate;
+				if (durationField.enabled){
+					task.workColumn = durationField.text
+				}
+				task.percent_complete = percentSpinner.value
+				task.priority = prioritySpinner.value
+				if (milestone.selected){
+					task.type = "milestone"
+				}else{
+					task.type = "normal"
+				}
+//				Predecessors Tab
+				
+//				Resources Tab
+				task.resources = resources.source;
+//				Notes Tab
+				if (notesField){
+					task.note = notesField.text;
+				}
+//				
+				Global.closeAllPage();
+				Global.project.refresh();
+			}
+			
+			public function refresh():void{
+//				trace(1)
+//				trace(task.predecessors)
+				allPredTask.dataProvider = task.newPredecessorsList
+//				trace(2)
+			}
+			
+
+		]]>
+	</fx:Script>
+	
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+				  top="10" right="10" left="10" height="32" 
+				  backgroundColor="#ACB4CC"
+				  mouseDown="startDrag()"
+				  mouseUp="stopDrag()">
+			<s:Label top="10" left="15" right="35" text="Task Edit Page"/>
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="12" top="8" bottom="10"  width="13"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()"/>
+		</s:BorderContainer>
+		
+		<mx:TabNavigator top="45" left="12" right="10" bottom="36">
+			<s:NavigatorContent label="General" width="100%" height="100%">
+				
+				<s:Label x="10" y="10" text="Name:" width="48" fontSize="14" fontWeight="normal" height="20" verticalAlign="bottom" textAlign="right"/>
+				<s:TextInput x="61" y="10" id="nameField" width="260" text="{task.name}"/>
+				
+				<s:Label x="329" y="10" text="Duration:" height="20" verticalAlign="bottom" fontSize="14"/>
+				<s:TextInput x="387" y="10" id="durationField" width="63" text="{task.workColumn}" enabled="{!(task.isParent() || task.isMilestone())}"/>
+				
+				<s:Label x="10" y="45" text="Percent complect: {percentSpinner.value}%" height="20" verticalAlign="middle" width="137"/>
+				<s:Spinner id="percentSpinner" height="20" x="144" y="45" minimum="0" maximum="100" value="{task.percent_complete}" />
+				
+				<s:Label x="190" y="45" height="20" text="Priority: {prioritySpinner.value}" width="75" verticalAlign="middle"/>
+				<s:Spinner x="273" y="44" height="20" id="prioritySpinner" value="{task.priority}" minimum="0" maximum="1000"/>
+				
+				<s:CheckBox x="323" y="45" id="milestone" label="Milestone" selected="{task.isMilestone()}" visible="{!task.isParent()}"/>
+				
+				<s:Label x="10" y="90" text="start: {dateToString(task.start)}"/>
+				<s:Label x="190" y="90" text="finish: {dateToString(task.end)}"/>
+				
+				<s:Label x="10" y="124" text="must start on:"/>
+				<mx:DateField  x="88" y="117" id="dateField" selectedDate="{task.constraintDate}"  showToday="true" width="98" />
+				
+			</s:NavigatorContent>
+			<s:NavigatorContent label="Predecessors" width="100%" height="100%">
+				
+				<mx:List id="predecessors" 
+						 itemRenderer="mxml.cellRenderer.PredecessorListCell"
+						 left="0" right="0" top="0" bottom="34"
+						 dataProvider="{task.predecessors}" />
+				
+				<s:Label left="0" bottom="8" text="WBS:" width="45" height="20" verticalAlign="bottom" fontWeight="bold" fontSize="14" textAlign="right"/>
+				<s:DropDownList id="allPredTask" x="48" bottom="8" width="302" dataProvider="{task.newPredecessorsList}" />
+				<s:DropDownList id="predType" x="353" bottom="8" width="53" selectedIndex="0" >
+					<s:dataProvider>
+						<s:ArrayList source="[FS,FF,SF,SS]"/>					
+					</s:dataProvider>
+				</s:DropDownList>
+				<s:Button right="6" bottom="8" label="add" width="42"
+						  click="{task.addPredecessor(allPredTask.selectedItem.task,predType.selectedItem)};Global.project.refresh();refresh()"/>
+				
+			</s:NavigatorContent>
+			<s:NavigatorContent label="Resources" width="100%" height="100%">
+				<mx:List left="0" top="0" bottom="0" width="50%" dataProvider="{allResources}" dragEnabled="true" dragMoveEnabled="true" dropEnabled="true"/>
+				<mx:List id="taskResources" right="0" top="0" bottom="0" width="50%" dataProvider="{resources}" dragEnabled="true" dragMoveEnabled="true" dropEnabled="true" 
+						 doubleClickEnabled="true" doubleClick="resourceEditPane.visible=true;Resource(taskResources.selectedItem).unitsByTask(task)"/>
+				
+				<s:Panel id="resourceEditPane" x="108" y="33" width="242" height="120" visible="false">
+					<s:Label x="10" y="-25" text="Resource Unit config" width="222" height="16" verticalAlign="middle" textAlign="center" fontWeight="bold" fontSize="12"/>
+					
+					<s:Label x="10" y="10" text="Resorce Name:" width="95" textAlign="right"/>
+					<s:Label x="113" y="10" text="{Resource(taskResources.selectedItem).name}" width="190" height="12"/>
+					
+					<s:Label x="12" y="30" text="units:" width="92" textAlign="right"/>
+					<s:Label x="115" y="30" text="{sp.value}" width="50" height="12"/>
+					<s:Spinner id="sp" x="142" y="28" value="{Resource(taskResources.selectedItem).unitsByTask(task)}" height="16"/>
+					
+					<s:Button x="79" y="51" label="Ok" click="{Resource(taskResources.selectedItem).taskUnits=sp.value;resourceEditPane.visible=false}"/>
+					<s:Button x="157" y="51" label="cancel" click="{resourceEditPane.visible=false;sp.value=Resource(taskResources.selectedItem).taskUnits}"/>
+				</s:Panel>
+				
+			</s:NavigatorContent>
+			<s:NavigatorContent label="Notes" width="100%" height="100%">
+				<s:TextArea id="notesField" left="0" right="0" top="0" bottom="0" text="{task.note}"/>
+			</s:NavigatorContent>
+		</mx:TabNavigator>
+		
+		<s:Button x="311" y="271" label="save" click="save()"/>
+		<s:Button x="390" y="271" label="cancel" click="Global.closeAllPage()"/>
+		
+	</s:BorderContainer>
+</s:Group>

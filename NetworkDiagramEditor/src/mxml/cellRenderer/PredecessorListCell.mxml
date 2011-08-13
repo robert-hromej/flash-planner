@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Box xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			 xmlns:s="library://ns.adobe.com/flex/spark" 
+			 xmlns:mx="library://ns.adobe.com/flex/mx" 
+			 width="400" height="28">
+	<fx:Script>
+		<![CDATA[
+			import planner.Predecessor;
+		]]>
+	</fx:Script>
+	
+	<s:Group width="100%" height="100%">
+		<s:layout>
+			<s:BasicLayout/>
+		</s:layout>
+		<s:Label left="10" right="75" 
+				 text="{Predecessor(data).predTask.wbsName}" 
+				 height="100%" verticalAlign="middle" />
+		<s:Label right="40" width="30"
+				 text="{Predecessor(data).type}" 
+				 height="100%" verticalAlign="middle"  textAlign="center" fontWeight="bold"/>
+		<mx:Image right="5" top="1" bottom="1"
+				  useHandCursor="true" buttonMode="true"
+				  source="@Embed('assets/img/delete_icon.png')"
+				  click="Predecessor(data).destroy()"/>
+	</s:Group>
+	
+</mx:Box>

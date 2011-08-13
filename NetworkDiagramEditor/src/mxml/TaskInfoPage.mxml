@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="432"  height="210" xmlns:methods="utils.methods.*">
+	<fx:Script>
+		<![CDATA[
+			import utils.Global;
+			import planner.Task;
+			import utils.methods.dateToString;
+			
+			private var _task:Task
+			
+			[Bindable] public function get task():Task{
+				return _task
+			}
+			
+			public function set task(t:Task):void{
+				_task = t
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+				  top="10" right="10" left="10" height="32" 
+				  backgroundColor="#ACB4CC"
+				  mouseDown="startDrag()"
+				  mouseUp="stopDrag()">
+			<mx:Label left="10" width="{header.width-40}" top="5"
+					 text="{task.wbsName}" fontWeight="bold" fontSize="16"/>
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="10" top="8"  width="17"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()" height="14"/>
+		</s:BorderContainer>
+		<mx:Label x="89" y="60" text="Start: {dateToString(task.start)}" fontSize="16"/>
+		<mx:Label x="80" y="80" text="Finish: {dateToString(task.end)}" fontSize="16"/>
+		
+		<mx:Label x="300" y="60" text="Priority: {task.priority}" fontSize="16"/>
+		<mx:Label x="283" y="80" text="Complect: {task.percent_complete}%" fontSize="16"/>
+		<mx:Label x="63" y="100" text="Duration: {task.workColumn}" fontSize="16"/>
+		
+		<mx:Label x="22" y="130" width="{header.width-20}" text="Predecessors: {task.predecessors.source.toString()}" fontSize="16"/>
+		<mx:Label x="52" y="150" width="{header.width-50}" text="Resoures: {task.resources.toString()}" fontSize="16" />
+		<mx:Label x="78" y="170" text="Notes: {task.note}" fontSize="16" width="344" height="34"/>
+		
+	</s:BorderContainer>
+</s:Group>

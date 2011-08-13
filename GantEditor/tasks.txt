@@ -1,0 +1,5 @@
+1. оптимізувати методи:
+Calendar.countEndX()
+Calendar.countStartX()
+
+2. оптимізувати undo/redo функціонал

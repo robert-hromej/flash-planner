@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 width="398" height="188" xmlns:local="*" 
+		 xmlns:methods="utils.methods.*" 
+		 xmlns:utils="utils.*">	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import planner.Task;
+			
+			import utils.Global;
+			import utils.Seating;
+			import utils.methods.dateToString;
+			
+			protected function create():void{
+				var task:Task = Task.create(nameField.text,parentTask.selectedItem,milestone.selected, percentSpinner.value, prioritySpinner.value);
+				Global.closeAllPage();
+			}
+			
+			private function get parentTasks():ArrayCollection{
+				var ar:ArrayCollection = new ArrayCollection();
+				for each(var task:Task in Task.findAll()){
+					if (!task.isMilestone()){
+						ar.addItem(task);
+					}
+				}
+				return ar;
+			}
+			
+			public function selectParentById(id:uint):void{
+				parentTask.selectedIndex = parentTasks.getItemIndex(Task.findById(id));
+			}
+			
+		]]>
+	</fx:Script>
+	<s:BorderContainer top="0" right="0" left="0" bottom="0" borderColor="#000000" backgroundColor="#EAE7E7">
+		<s:BorderContainer id="header" 
+						   top="10" right="10" left="10" height="32" 
+						   backgroundColor="#ACB4CC"
+						   mouseDown="startDrag()"
+						   mouseUp="stopDrag()">
+			<s:Label top="10" left="15" right="35" text="Create New Task" textAlign="center" fontWeight="bold" fontSize="16"/>
+			<mx:Image id="closeButton" 
+					  source="@Embed('assets/img/closeButton.png')"  
+					  right="12" top="8" bottom="10"  width="13"
+					  useHandCursor="true" buttonMode="true"
+					  click="Global.closeAllPage()"/>
+		</s:BorderContainer>
+		
+		<s:Label x="15" y="86" text="Parent Task: " fontSize="14" fontWeight="normal" height="20" verticalAlign="bottom"/>
+		<s:DropDownList id="parentTask" x="96" y="86" width="290" dataProvider="{parentTasks}">
+		</s:DropDownList>
+		
+		<s:Label x="14" y="57" text="Name:" width="48" fontSize="14" fontWeight="normal" height="20" verticalAlign="bottom"/>
+		<s:TextInput x="59" y="57" id="nameField" width="187" text="new task"/>
+		
+		<s:Label x="264" y="57" text="Duration:" height="20" verticalAlign="bottom" fontSize="14"/>
+		<s:TextInput x="322" y="57" id="durationField" width="63" text="1d" enabled="{!milestone.selected}"/>
+		
+		<s:Label x="15" y="117" text="Percent complect: {percentSpinner.value}%" height="20" verticalAlign="middle" width="137"/>
+		<s:Spinner id="percentSpinner" height="20" x="149" y="115" minimum="0" maximum="100" value="0" />
+		
+		<s:Label x="193" y="120" height="20" text="Priority: {prioritySpinner.value}" width="75" verticalAlign="middle"/>
+		<s:Spinner x="270" y="118" height="20" id="prioritySpinner" value="500" minimum="0" maximum="1000"/>
+		
+		<s:CheckBox x="312" y="118" id="milestone" label="Milestone" selected="false" />
+		
+		<s:Button x="111" y="151" label="create" click="create()"/>
+		<s:Button x="215" y="151" label="cancel" click="Global.closeAllPage()"/>
+		
+	</s:BorderContainer>
+</s:Group>

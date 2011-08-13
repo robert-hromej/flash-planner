@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controllers:CalendarController xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:controllers="app.controllers.*" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 xmlns:views="app.views.*" width="738">
+	<controllers:layout>
+		<s:BasicLayout/>
+	</controllers:layout>
+	
+	<views:HeaderView id="header">
+	</views:HeaderView>
+	
+	<s:Scroller id="calendarScroll" top="20" height="100%" >
+		<s:DataGroup id="cal" y="20" dataProvider="{dataProvider}">
+			<s:layout>
+				<s:BasicLayout/>
+			</s:layout>
+		</s:DataGroup>
+	</s:Scroller>
+	
+</controllers:CalendarController>

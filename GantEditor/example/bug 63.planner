@@ -1,0 +1,181 @@
+<project calendar="1" project-start="20100315T000000Z" company="Kemunity" name="" mrproject-version="2"> 
+	<calendars> 
+		<day-types> 
+			<day-type description="A default working day" name="Working" id="0" /> 
+			<day-type description="A default non working day" name="Nonworking" id="1" /> 
+			<day-type description="Use day from base calendar" name="Use base" id="2" /> 
+		</day-types> 
+		<calendar id="1" name="Standard"> 
+			<default-week sun="1" sat="1" fri="0" thu="0" wed="0" tue="0" mon="0" /> 
+			<overridden-day-types> 
+				<overridden-day-type id="0"> 
+					<interval end="1200" start="0800" /> 
+					<interval end="1700" start="1300" /> 
+				</overridden-day-type> 
+			</overridden-day-types> 
+			<days /> 
+		</calendar> 
+	</calendars> 
+	<tasks> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Taches Transversales" id="1"> 
+			<constraint time="20100315T000000Z" type="must-start-on" /> 
+			<predecessors /> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Juridique" id="2"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Redaction contrats type" id="3"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Question/Reponses" id="4"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Exoneration TVA Oui/Non ?" id="5"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Exoneration Octroi de Mer Oui/Non" id="6"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Besoin de licence agennce de voyage Oui/Non" id="7"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Apport Capital en Travail Oui/Non ?" id="8"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Exoneration Cotisation Sociales pour les DOM/TOM Oui/Non ?" id="9"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Plan de communication" id="10"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Conception Logo" id="11"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Conception Charte graphique" id="12"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Financement projet" id="13"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Recherche" id="14"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Ressources Humaines" id="15"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Recrutement personnel" id="16"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="DSI" id="17"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Commerciaux" id="18"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Sourcing" id="19"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Service client" id="20"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Mise en place du Systeme d'information" id="21"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="SI Tache 1" id="22"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+			</task> 
+		</task> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Etude de marche" id="23"> 
+			<constraint time="20100315T000000Z" type="must-start-on" /> 
+			<predecessors /> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Realisation enquetes" id="24"> 
+				<constraint time="20100315T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Expression de besoin" id="25"> 
+					<constraint time="20100315T000000Z" type="must-start-on" /> 
+					<predecessors /> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20100317T000000Z" start="20100317T000000Z" note="" name="Devis Benchmark Group" id="26"> 
+					<constraint time="20100317T000000Z" type="must-start-on" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="25" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="milestone" priority="5000" percent-complete="0" work="0" work-start="20100317T000000Z" start="20100317T000000Z" note="" name="Devis Creatests.fr" id="27"> 
+					<constraint time="20100317T000000Z" type="must-start-on" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="25" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100318T000000Z" start="20100318T000000Z" note="" name="Choix prestataire" id="28"> 
+					<constraint time="20100318T000000Z" type="must-start-on" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="27" id="1" /> 
+					</predecessors> 
+				</task> 
+				<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100319T000000Z" start="20100319T000000Z" note="" name="Realisation etude par le prestataire" id="29"> 
+					<constraint time="20100319T000000Z" type="must-start-on" /> 
+					<predecessors> 
+						<predecessor lag="0" type="FS" predecessor-id="28" id="1" /> 
+					</predecessors> 
+				</task> 
+			</task> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100322T000000Z" start="20100322T000000Z" note="" name="Redaction Synthese &quot;etude de marche&quot;" id="30"> 
+				<constraint time="20100322T000000Z" type="must-start-on" /> 
+				<predecessors> 
+					<predecessor lag="0" type="FS" predecessor-id="29" id="1" /> 
+				</predecessors> 
+			</task> 
+		</task> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100325T000000Z" start="20100325T000000Z" note="" name="Business Plan" id="31"> 
+			<constraint time="20100325T000000Z" type="must-start-on" /> 
+			<predecessors> 
+				<predecessor lag="0" type="FS" predecessor-id="23" id="1" /> 
+			</predecessors> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100325T000000Z" start="20100325T000000Z" note="" name="Redaction du business Plan" id="32"> 
+				<constraint time="20100325T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+			</task> 
+		</task> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100326T000000Z" start="20100326T000000Z" note="" name="Creation Societe" id="33"> 
+			<constraint time="20100326T000000Z" type="must-start-on" /> 
+			<predecessors> 
+				<predecessor lag="0" type="FS" predecessor-id="31" id="1" /> 
+			</predecessors> 
+			<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100326T000000Z" start="20100326T000000Z" note="" name="Nouvelle tache_31" id="34"> 
+				<constraint time="20100326T000000Z" type="must-start-on" /> 
+				<predecessors /> 
+			</task> 
+		</task> 
+		<task scheduling="fixed-work" type="normal" priority="5000" percent-complete="0" work="0" work-start="20100315T000000Z" start="20100315T000000Z" note="" name="Nouvelle tache_32" id="35"> 
+			<constraint time="20100315T000000Z" type="must-start-on" /> 
+			<predecessors /> 
+		</task> 
+	</tasks> 
+	<resources> 
+		<resource note="" units="0" type="1" email="" name="Jeanne Jemba" id="1" /> 
+		<resource note="" units="0" type="1" email="" name="Epo Jemba" id="2" /> 
+		<resource note="" units="0" type="1" email="" name="Avocat" id="3" /> 
+	</resources> 
+	<allocations /> 
+</project>
